@@ -11,11 +11,11 @@ class NRKMP3Spider(Spider):
         "http://www.nrk.no/mp3/",
     ]
 
-	# This takes care of the stationid so you don't need to think about that.
-	# Just send in the station id when you do a pull-request
-	# You find the station id on station page and under contribute, you will see the id in the url.
-	def __init__(self, stationid=''):
-		self.station_id = stationid
+    # This takes care of the stationid so you don't need to think about that.
+    # Just send in the station id when you do a pull-request
+    # You find the station id on station page and under contribute, you will see the id in the url.
+    def __init__(self, stationid=''):
+        self.station_id = stationid
 
     def parse(self, response):
         """
@@ -29,8 +29,8 @@ class NRKMP3Spider(Spider):
         songs = sel.xpath('//*[@id="wrapper"]/div[3]/div[2]/div/table/tbody/tr[1]/td/span/text()').extract()
         
         items = []
-		
-		# After the songs changes i'm not sure if for is needed.
+        
+        # After the songs changes i'm not sure if for is needed.
         for song in songs:
             print song
             songname = song.split(' - ')
