@@ -7,7 +7,7 @@ Scraper
 -------
 We use this scrapers to get song information from radio station’s websites.
 
-When a scrapers will be used for a station the default stream scraper will be switched off for that station and it will then just use this scraper.
+When a scraper will be used for a station the default streamscrobbler scraper will be switched off for that station and it will just use this scraper.
 
 
 
